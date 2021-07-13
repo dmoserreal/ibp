@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="web_author" content="Dennis Moser">
+    <title>Windowing System Optimization</title>
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <script type="text/javascript" src="/Public/Flatpickr.js"></script>
+    <script type="text/javascript" src="/Public/Ace/ace.js" charset="utf-8"></script>
+    <script src="https://kit.fontawesome.com/821293e19c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen" href="/Bundles/css">
+</head>
+<body>
+    <div id="BaseViewLoader"></div>
+    <script type="text/javascript" src="/Bundles/js"></script>
+    <script id="_PL_BOTTOM" type="text/javascript">
+        var _pl = window._pl;
+        if (_pl) {
+            if (!String.prototype.endsWith) {
+                String.prototype.endsWith = function (search, this_len) {
+                    if (this_len === undefined || this_len > this.length) {
+                        this_len = this.length;
+                    }
+                    return this.substring(this_len - search.length, this_len) === search;
+                };
+            }
+            if (!String.prototype.startsWith) {
+                String.prototype.startsWith = function (searchString, position) {
+                    position = position || 0;
+                    return this.indexOf(searchString, position) === position;
+                };
+            }
+
+            if (_pl.dataKey) {
+                var x = new XMLHttpRequest();
+
+                var pathname = window.location.pathname;
+                if (!pathname.endsWith('/'))
+                    pathname += '/';
+                if (!pathname.startsWith('/'))
+                    pathname = '/' + pathname;
+                var url = pathname + '-viewData' + window.location.search;
+                x.open('POST', url, true);
+                x.setRequestHeader("Content-Type", "application/json");
+                x.setRequestHeader("SysmoSoftwareRequest", "1");
+                x.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == '200') {
+                        if (!_pl.dataReceived) {
+                            _pl.dataReceived = true;
+                            _pl.data = JSON.parse(this.responseText);
+
+                            if (window.I && window.I.state)
+                                window.I.state.checkIfReady();
+                        }
+                    }
+                };
+                x.send("{\"DataKey\":\"" + _pl.dataKey + "\"}");
+            }
+
+            _pl._loadMaster = function () {
+                var m = _pl.__master;
+                if (m && !m.loadCompleted) {
+                    m.loadCompleted = true;
+                    m.uniqueName = m.response.reply.uniqueName;
+                    console.log(m);
+                    document.getElementById("BaseViewLoader").innerHTML = m.response.reply.html;
+                    if (_pl._loadAllViews)
+                        _pl._loadAllViews();
+                }
+            };
+            _pl._loadMaster();
+            _pl._getView = function (name) {
+                var v = _pl.views;
+                for (var i = 0; i < v.length; i++)
+                    if (v[i].name == name) return v[i];
+                return null;
+            };
+            _pl._loadView = function (obj) {
+                if (!obj.loadCompleted && obj.parent && obj.response) {
+                    var parent = _pl._getView(obj.parent);
+
+                    if (!parent || !parent.loadCompleted) return;
+
+                    var id = "VL_" + obj.viewLoader;
+                    var viewLoader = document.getElementById(id);
+                    viewLoader.innerHTML = "<div viewname='" + obj.response.reply.uniqueName + "'>" + obj.response.reply.html + "</div>";
+
+                    obj.uniqueName = obj.response.reply.uniqueName;
+                    parent.viewLoaders = [{ html: viewLoader, activeView: obj, name: obj.viewLoader }];
+
+                    obj.loadCompleted = true;
+                    _pl._loadAllViews();
+                }
+            };
+            _pl._loadAllViews = function () {
+                if (_pl.allCompleted)
+                    return;
+
+                var v = _pl.views, allCompleted = true;
+                for (var i = 0; i < v.length; i++) {
+                    var obj = v[i];
+                    if (allCompleted && !obj.loadCompleted) allCompleted = false;
+                    _pl._loadView(obj);
+                }
+
+                if (allCompleted && !_pl.allCompleted) {
+                    _pl.allCompleted = true;
+
+                    window.viewScripts = {};
+
+                    for (var x = 0; x < v.length; x++) {
+                        var o = v[x];
+                        var js = o.response.reply.javaScript;
+                        if (js) {
+                            window.viewScripts[o.response.reply.uniqueName] = js;
+                        }
+                        o.response = null;
+                    }
+
+                    console.log('-- Pageloader done loading --');
+                    //_pl.__master = null;
+                    //_pl.views = null;
+
+                    if (window._exposedDocLoadForPl) {
+                        window._exposedDocLoadForPl();
+                        window._exposedDocLoadForPl = null;
+                    }
+                }
+            };
+            _pl._loadAllViews();
+            var e = document.getElementById("_PL_TOP");
+            if (e)
+                e.parentNode.removeChild(e);
+            e = document.getElementById("_PL_BOTTOM");
+            if (e)
+                e.parentNode.removeChild(e);
+        }
+    </script>
+</body>
+</html>

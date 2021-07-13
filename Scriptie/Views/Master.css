@@ -1,0 +1,114 @@
+﻿body {
+    position: static; /* necesarry for IE scrollbar height update for some reason */
+    font-family: 'LatoSkylight', sans-serif, Arial;
+    font-weight: 400;
+    color: #303438;
+}
+
+
+#DashboardItems {
+}
+
+#Board {
+    position: absolute;
+    top: 128px;
+    bottom: 10px;
+    left: 370px;
+    right: 300px;
+    background: #fff;
+    border: 1px solid #aaa;
+    z-index: 5;
+}
+
+
+#Header {
+    z-index: 5;
+    height: 118px;
+    border-bottom: 2px solid #ececf9;
+    background: #fdfdff;
+}
+
+
+#HeaderLeft {
+    padding: 0;
+    height: 80px;
+}
+
+#Logo {
+    width: 138px;
+    margin: 12px 60px 10px 28px;
+}
+
+#HeaderTop {
+    height: 80px;
+}
+
+#Title {
+    font-size: 20px;
+    margin: 4px 0 0 6px;
+}
+
+#HeaderBottom {
+}
+
+#FirstHeaderRow {
+    height: 10px;
+}
+
+#LoadBar {
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    z-index: 5;
+}
+
+#LoadBarProgress {
+    border-radius: 0;
+}
+
+#LoadBarCandy {
+    display: none;
+}
+
+.sideMenuOffset {
+    margin-left: 199px;
+}
+
+.headerOffset {
+    margin-top: 118px;
+}
+
+#NavigationBar > a {
+    background: initial;
+}
+
+#NavigationBar > a.hover {
+    background: #F4F4F4;
+}
+
+#NavigationBar > a.selected {
+    background: initial !important;
+    /*
+        background: #f7f0e8 !important;
+        color: #000 !important;
+        border-radius: 4px 4px 0 0;*/
+}
+
+#NavigationBar > a.hover.selected, #NavigationBar > a.hover {
+    background: #F4F4F4 !important;
+    color: #0096ff !important;
+}
+
+#NavigationBar > a.hover.active {
+    color: #8cd0ff !important;
+}
+
+.downloadBtn {
+    background: #0078cb;
+    margin: 10px;
+}

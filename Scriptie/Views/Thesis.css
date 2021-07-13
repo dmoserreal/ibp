@@ -1,0 +1,989 @@
+﻿
+.AlgorithmSettingsAce {
+    width: 700px;
+    height: 700px;
+}
+
+table td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* new */
+.stratRb {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+/* old */
+#ScriptieStats {
+    float: left;
+    width: 310px;
+}
+
+#ScriptieControls {
+    float: right;
+    width: 240px;
+}
+
+#ExperimentBox {
+    float: right;
+    width: 240px;
+    clear: right;
+}
+
+.scriptieBox {
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #C4C4C4;
+    -webkit-box-shadow: 0 0 2px rgba(56,56,56,0.25);
+    -moz-box-shadow: 0 0 2px rgba(56,56,56,0.25);
+    box-shadow: 0 0 2px rgba(56,56,56,0.25);
+}
+
+#BtnRunFullExpirement {
+    float: none;
+    background: #0070c1;
+    margin-top: 10px;
+}
+
+#BtnAddNextBox {
+    margin-top: 10px;
+    background: #93b625;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+#BtnFullExpirementSettings {
+    background: #FAFAFA;
+    color: #555;
+}
+
+.scriptieSqr {
+    position: absolute;
+    background: #000;
+    pointer-events: none;
+}
+
+#AddOne {
+    clear: both;
+    width: 120px;
+}
+
+#AddMultiple {
+    clear: both;
+    padding: 7px 24px;
+    background: #de770a;
+}
+
+.btnExportData {
+    background: #255eb6 !important;
+}
+
+#InpAddMultiple {
+    width: 80px;
+}
+
+.btnAddOne {
+    background: #93b625;
+}
+
+#BtnResetSetup {
+    background: #255eb6;
+}
+
+.lblGrade {
+    font-weight: bold;
+}
+
+.rli {
+    clear: both;
+    margin-top: 10px;
+}
+
+.rbb {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+#TargetDiv {
+    position: absolute;
+    border-radius: 10px;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 0, 0, 0.5);
+    border: 1px solid #000;
+    z-index: 99999;
+}
+
+.btnAlmondRed {
+    background-color: #b30738;
+    background-image: -webkit-linear-gradient(top,#b30738,#960831);
+    background-image: -moz-linear-gradient(top,#b30738,#960831);
+    background-image: -o-linear-gradient(top,#b30738,#960831);
+    background-image: linear-gradient(to bottom,#b30738,#960831);
+}
+
+    .btnAlmondRed.hover {
+        background: #de597f;
+        background-image: -webkit-linear-gradient(top,#de597f,#c73b63);
+        background-image: -moz-linear-gradient(top,#de597f, #c73b63);
+        background-image: -o-linear-gradient(top,#de597f,#c73b63);
+        background-image: linear-gradient(to bottom,#de597f,#c73b63);
+    }
+
+    .btnAlmondRed.active {
+        background: #d2315f;
+        background-image: -webkit-linear-gradient(top,#d2315f,#cc2f5c);
+        background-image: -moz-linear-gradient(top,#d2315f, #cc2f5c);
+        background-image: -o-linear-gradient(top,#d2315f,#cc2f5c);
+        background-image: linear-gradient(to bottom,#d2315f,#cc2f5c);
+    }
+
+    .btnAlmondRed.locked {
+        /*background: #c73b63;*/
+    }
+
+#Bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(/Public/Images/bg_storage.jpg);
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%; /* compatibility */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: 50% 50%; */
+    z-index: -2;
+}
+
+#BgIE {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#BgFilter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(253, 253, 253);
+    opacity: 0.14;
+    filter: alpha(opacity:14);
+    z-index: -1;
+}
+
+#MiddleOuter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 575;
+}
+
+#Middle {
+    position: relative;
+    height: 0; /* Click through */
+    width: 400px;
+    margin: 0 auto;
+}
+
+#MiddleHolder {
+    position: absolute;
+    top: 5px;
+    width: 400px;
+    left: 0;
+}
+
+.managementPage {
+    padding: 0;
+}
+
+.icon, #ClrStatus, #PersonIcon, .buttonImg, .tbIcon, .tbIconMiddle, .tbIconMore, .action.close, .toastX, .ddButton, .ddArrow, .itemPlay, #MenuIcon, .startMIcon {
+    background-image: url(/Public/Images/IconPage.png) !important;
+}
+
+#LoadBar {
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    z-index: 5;
+}
+
+#LoadBarProgress {
+    border-radius: 0;
+}
+
+#LoadBarCandy {
+    display: none;
+}
+
+#AlmondsCom {
+}
+
+#SbOptions.on, #SbOptions.active, .sbI.active {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.44);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.44);
+}
+
+#SbSelected, .sbI.selected, #SbOptions {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+/* .ellipsis */
+.sbI, #SbName, #SbUserName, .itemViewHeaderTitle {
+    display: block;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.viewHolder {
+    position: absolute;
+    left: 199px;
+    right: 0;
+    top: 49px;
+    overflow-x: auto;
+}
+
+.viewPageHolder {
+    position: absolute;
+    left: 199px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.viewPageHeader {
+    position: relative;
+    overflow: hidden;
+}
+
+.tableViewTitle {
+    clear: both;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.tableView {
+    background: #ffffff;
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+    color: #078fd2;
+    border-radius: 3px;
+}
+
+.tableViewHolder {
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    margin-top: 20px;
+    background: #fdfdff;
+}
+
+.datePicker {
+    background-color: #FFF;
+    border: 1px solid #C4C4C4;
+    float: left;
+    width: 220px;
+    height: 15px;
+    padding: 6px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #161A22;
+    outline: none;
+    cursor: text;
+}
+
+.focus.datePicker {
+    background: #f4f4f4;
+    border-color: #7894c7;
+    -webkit-box-shadow: inset 0 1px 2px #E2E2E2;
+    -moz-box-shadow: inset 0 1px 2px #E2E2E2;
+    box-shadow: inset 0 1px 2px #E2E2E2;
+    cursor: initial;
+}
+
+.alert.datePicker {
+    border-color: #E04343;
+}
+
+.disabled.datePicker {
+    background: #f4f4f4;
+    border-color: #e4e4e4;
+    cursor: default;
+}
+
+.datePickerFloater {
+    width: 256px;
+    padding: 4px 2px 4px 4px;
+    background: #eaf1ff;
+    border-color: #5086e9;
+    border-radius: 6px;
+}
+
+.dropdownDP {
+    float: left;
+    width: 80px !important;
+    margin-right: 4px;
+}
+
+    .dropdownDP:last-child {
+        margin-right: 0;
+    }
+
+
+#OuterCenterDiv {
+}
+
+#CenterDiv {
+    display: table;
+    margin: 0 auto;
+}
+
+#DDSearchColumn {
+    float: left;
+    width: 130px;
+    margin: 2px 0 0 20px;
+}
+
+.lblFormSearch {
+    float: left;
+    margin-top: 9px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.ddFormSearch {
+    float: left;
+    width: 130px !important;
+    margin: 2px 0 0 10px;
+}
+
+#BtnBatchDownload {
+    float: left;
+    margin: 2px 0 0 20px;
+    padding: 5px 8px 6px 8px;
+}
+
+#TxtSearch {
+    float: left;
+    margin: 2px 0 0 6px;
+}
+
+#InpSearch {
+    width: 170px;
+    padding-left: 28px;
+}
+
+#LblSearch {
+    left: 31px;
+    top: 8px;
+}
+
+#IconSearch {
+    pointer-events: none;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    width: 23px;
+    height: 19px;
+}
+
+#UserPageTable, #PermPageTable, #PermAdminTable {
+    margin: 20px;
+    margin-bottom: 10px;
+    max-width: 400px;
+    border: 1px solid #ececf9;
+}
+
+#AdminSelection, #HPSelection {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#DDSelectAdminPerm, #DDSelectHPPerm {
+    float: left;
+    width: 260px;
+}
+
+#BtnAdminGrant, #BtnHPGrant {
+    margin-left: 10px;
+}
+
+#BtnDeactivate, #BtnChangePassword {
+    margin-left: 20px;
+}
+
+#ChangePasswordHolder {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#BtnChangePassword2 {
+    float: none;
+    margin-top: 10px;
+}
+
+.form {
+    border: 1px solid #4a1713;
+    width: 740px;
+    margin: 20px;
+    /* border-radius: 2px; */
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.container {
+    padding-bottom: 85px !important;
+}
+
+.formFooter {
+    margin-top: 8px;
+    padding: 10px 6px;
+    background: #ececec;
+    overflow: hidden;
+    border-top: 1px solid #dadada;
+}
+
+.formHeader {
+    padding: 10px 20px;
+    background: #a20632;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom,#c31647,#94062e);
+}
+
+.formTitle {
+    font-size: 19px;
+    text-align: left;
+    color: #fff;
+    text-shadow: 1px 1px 0.5px #5a081f;
+    float: left;
+    margin-top: 7px;
+}
+
+#AssessmentsTable {
+    width: 740px;
+}
+
+    #AssessmentsTable tr:nth-child(odd) {
+        background: #f9f9f9;
+    }
+
+    #AssessmentsTable tr:first-of-type {
+    }
+
+
+
+#HandlerSelect {
+    margin-top: 25px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#DDSelectHandler {
+    float: left;
+    width: 290px;
+    margin-left: 30px;
+}
+
+#SelectedHandlerArea {
+    float: left;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+#ASubmitStatus {
+    background: #fafcfe;
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
+    border: 1px solid #c4c4c4;
+    clear: both;
+    border-radius: 2px;
+}
+
+#BtnAssSubmit {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #4A92FF;
+}
+
+#BtnAssUnsubmit {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #4A92FF;
+}
+
+#BtnCheckIn {
+    margin: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: right;
+}
+
+#CheckedIn {
+    color: green;
+    margin: 11px;
+    font-size: 18px;
+    float: left;
+}
+
+#BtnSave, #BtnPrint {
+    margin: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: right;
+}
+
+#DDSelectPeriod {
+    float: left;
+    /* margin-top: 25px; */
+    margin-left: 40px;
+    width: 180px;
+}
+
+#DDSelectPeriodOverview {
+    float: left;
+    width: 240px;
+}
+
+
+.noFormLabel {
+    padding: 18px;
+    display: block;
+    font-size: 16px;
+}
+
+.formInfo, .formWarning {
+    border: 1px solid #4a1713;
+    margin: 30px;
+    background: #fafafa;
+    padding: 10px;
+    font-size: 16px;
+    width: 720px;
+}
+
+.formWarning {
+    border-color: #e03d00;
+    color: #563d36;
+    background: #fff4f4;
+    font-weight: 600;
+}
+
+.formInfoLine {
+    line-height: 22px;
+}
+
+#PeriodStatusOpen {
+    margin-right: 18px;
+    float: right;
+    font-size: 16px;
+    padding: 7px;
+    color: #0d520c;
+    border: 1px solid #0d520c;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+}
+
+#PeriodStatusClosed {
+    margin-right: 18px;
+    float: right;
+    font-size: 16px;
+    padding: 7px;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+#AssessmentNotFound {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.assessmentTables {
+    background: #f6f9fd;
+    padding: 10px;
+    overflow: hidden;
+    clear: both;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid #e2e2ef;
+}
+
+#OverviewDD {
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px;
+    background: #f6f9fd;
+    border: 1px solid #5a5959;
+    float: left;
+}
+
+#SelectHandlerLbl {
+    padding: 8px;
+    /* padding-right: 28px; */
+    margin: 18px 0 0 0;
+    background-color: #fbfdff;
+    border: 1px solid #ececf9;
+    float: left;
+}
+
+.btnHandlerFormsWindow {
+    margin: 7px 10px;
+    width: 140px;
+    clear: both;
+}
+
+.lblHandlerFormsWindow {
+    float: left;
+    font-size: 15px;
+    margin-top: 14px;
+    max-width: 75px;
+    overflow: hidden;
+}
+
+.rowhForm {
+    overflow: hidden;
+    clear: both;
+}
+
+
+#HandlerInfo {
+    float: right; /*
+    position: relative;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 25px;*/
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    overflow: hidden;
+    max-width: 340px;
+}
+
+#HandlerName {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+#FormApproval {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#FormTitle {
+    clear: both;
+    text-align: center;
+}
+
+#FormPeriodInfo {
+    font-size: 16px;
+    /* float: left;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    */
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#FormPeriodLbl {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#FormReportingPeriodLbl {
+}
+
+.formviewHolder {
+    padding-bottom: 40px;
+}
+
+.viewTable.formView {
+    border: none;
+    border-bottom: 1px solid #e2e2ef;
+}
+
+.formView tr {
+    cursor: default !important;
+}
+
+.formView td, .formView th {
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: #e2e2ef;
+    padding: 4px;
+}
+
+    .formView th:last-of-type {
+        padding-right: 4px;
+        border-right: 1px solid #e2e2ef;
+    }
+
+.totalRow > td {
+    border-bottom: 2px solid #e2e2ef;
+}
+
+.totalRowColumn {
+    font-weight: bold;
+}
+
+.handlerformsWindow {
+    background: #f6fbff;
+}
+
+.handlerFormWindowLbl {
+    margin: 15px 10px 15px 10px;
+    font-size: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    text-align: center;
+    color: #c3570e;
+}
+
+#FormDDs {
+    margin-top: 10px;
+}
+
+#DDSelectFormYear {
+    float: left;
+    width: 150px;
+}
+
+#DDSelectFormPeriod {
+    float: left;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.itemViewDD.disabled {
+    background: #f4f4f4;
+}
+/*
+#FormsListTable tr {
+    cursor: default;
+}*/
+
+.green {
+    color: forestgreen;
+    font-weight: 600;
+}
+
+#BtnFormPrintBox, #BtnFormPrint {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+#StatusHolder {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 200px;
+    padding-top: 55px;
+    padding-bottom: 35px;
+    left: 45px;
+}
+
+#StatusBox {
+    overflow: hidden;
+    padding: 6px;
+    border: 1px solid #b50c3c;
+    background: #fffafa;
+    border-radius: 4px;
+    min-height: 29px;
+    float: left;
+    background: #fffcfd;
+    border: 1px solid #d81d4a;
+    /*
+    border: 1px solid #f48255;
+    background: #fdfdff;*/
+}
+
+    #StatusBox.submit {
+        background: #fdfffe;
+        border-color: #a0c5ad;
+    }
+
+#BtnStatusToggle {
+    float: right;
+    margin-left: 14px;
+}
+
+
+#LblStatus, #Checkmark {
+    float: left;
+    padding: 6px 6px 4px 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #d51341;
+    /*color: #de6f25;
+    */
+}
+
+    #LblStatus.submit, #Checkmark {
+        color: forestgreen;
+    }
+
+#Checkmark {
+    padding-right: 0;
+}
+
+#BtnEditForm {
+    float: left;
+    margin-top: 12px;
+    margin-left: 0;
+}
+
+#CurrentPeriodTable {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+#ClosePeriodBox {
+    border: 1px solid #cbcbde;
+    background: #fdfeff;
+    width: 400px;
+    margin: 35px 35px 10px 35px;
+}
+
+#PeriodPhases {
+    margin-top: 10px;
+}
+
+#PeriodControls {
+    clear: both;
+    float: left;
+    padding: 20px;
+    border: 2px solid #ffac38;
+    background: #ffe3c4;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom,#fdf5ee,#ffe0b4);
+    border-radius: 3px;
+}
+
+.periodBox {
+    /*
+    border: 1px solid #cbcbde;
+    background: #fdfeff;*/
+    overflow: hidden;
+    padding: 20px;
+    margin: 10px;
+}
+
+.periodTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.periodPhase {
+    float: left;
+    width: 150px;
+    height: 120px;
+    padding: 10px 4px;
+    margin-top: 20px;
+    margin-right: 0;
+    border: 1px solid #e6eaef;
+    background: #fcfdff;
+    border-radius: 5px;
+    -webkit-transition: all 800ms;
+    transition: all 800ms;
+}
+
+    .periodPhase.active {
+        border: 1px solid rgba(78, 78, 78, 0.23);
+    }
+
+.phaseTitle {
+    text-align: center;
+    font-size: 18px;
+}
+
+.phaseDes {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.phaseArrow {
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 82px;
+    padding: 4px;
+    color: #bd3d47;
+}
+
+#OpenPhase.active {
+    background: #3c80ba;
+    color: #fff;
+}
+
+#TwilightPhase.active {
+    background: #705aa7;
+    color: #fff;
+}
+
+#NightPhase.active {
+    background: #616161;
+    color: #fff;
+}
+
+#ClosedPhase.active {
+    background: #9a303d;
+    color: #fff;
+}
+
+.phaseMid {
+    height: 84px;
+}
+
+.phaseActive {
+    text-align: center;
+    font-size: 25px;
+    color: #6fd23e;
+    font-weight: bold;
+    /* text-decoration: underline; */
+    text-shadow: 0 0;
+    text-shadow: rgba(0, 0, 0, 0.4) 0 0 1px;
+    background: rgba(51, 51, 51, 0.34);
+    padding: 4px 2px 7px 2px;
+}
+
+.adminSubmitText {
+    float: none !important;
+    width: 144px !important;
+    height: 53px !important;
+    margin: 14px auto !important;
+}
+
+#UnsubmitButton {
+    margin-top: 10px;
+    margin-left: 16px;
+}
